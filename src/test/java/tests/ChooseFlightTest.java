@@ -25,7 +25,6 @@ public class ChooseFlightTest {
         Thread.sleep(1000);
         Assert.assertEquals(driver.findElement(By.tagName("h2")).getText(), "Your flight from TLV to SFO has been reserved.");
         Thread.sleep(1000);
-
         driver.quit();
 
     }
