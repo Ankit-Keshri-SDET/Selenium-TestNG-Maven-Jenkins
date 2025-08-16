@@ -2,8 +2,8 @@ pipeline {
     agent any
 
     tools {
-        maven 'MAVEN_HOME'   // Name of Maven installed in Jenkins (Manage Jenkins → Global Tool Config)
-        jdk 'JAVA_HOME'      // Name of JDK installed in Jenkins
+        maven 'MAVEN_HOME'
+        jdk 'JAVA_HOME'
     }
 
     stages {
@@ -16,13 +16,13 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building the project...'
-                sh 'mvn clean install'
+                bat 'mvn clean install'
             }
         }
         stage('Test') {
             steps {
                 echo 'Running tests...'
-                sh 'mvn clean test'
+                bat 'mvn clean test'
             }
         }
     }
